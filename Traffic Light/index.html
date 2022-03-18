@@ -1,0 +1,68 @@
+<DOCTYPE! html>
+<html>
+    <head>
+        <script src="sketch.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="p5/p5.js"></script>
+        <script src="p5/p5.sound.min.js"></script>
+        
+        
+        <title>Traffic Lights</title>
+    </head>
+    <h1>
+        Traffic Lights    
+    </h1>
+    <h3 style="color:darkgrey" style="posit">
+        Matthew Ranson<br>
+        <a href="https://github.com/MattR2718">GitHub</a>
+    </h3>
+    
+    <div class="text">
+        <p>There are three different colours that traffic lights turn:</p><br><br><br>
+        <ul>
+            <li>Red</li>
+            <li>Amber</li>
+            <li>Green</li>
+        </ul>
+        <p id="red">RED means ‘Stop’. Wait behind the stop line on the carriageway</p><br><br><br>
+        <p id="redandamber">RED AND AMBER also means ‘Stop’. Do not pass through or start until GREEN shows</p><br><br><br>
+        <p id="amber">AMBER means ‘Stop’ at the stop line. You may go on only if the AMBER appears after you have crossed the stop line or are so close to it that to pull up might cause an accident</p><br><br><br><br><br>
+        <p id="green">GREEN means you may go on if the way is clear. Take special care if you intend to turn left or right and give way to pedestrians who are crossing</p>
+    </div>
+    
+    <div class="rotateSettings">
+        <button id="button" onclick="toggleRotate()">Toggle Rotate</button>
+        <button id="button" onclick="resetRotate()">Reset Rotate</button>
+        <button id="button" onclick="toggleAnimation()">Toggle Animation</button>
+        <button id="button" onclick="stepAnimation()">Step Animation</button>
+        
+        <style>
+            .text p {
+                margin-left: 900px;
+                position: absolute;
+                font-size: 24px;
+                border-radius: 100px;
+                outline-color: aqua;
+                outline-width: 4px;
+                outline-style: solid;
+                padding: 10px;
+            }
+        </style>
+        
+        <div class="rotateSlider">
+          <input type="range" min="0" max="0.2" value="0.02" step="0.001" class="slider" id="rotateSpeed">
+        </div>
+        <div class="check">
+            <input type="checkbox" id="xC" onclick="xCheck()" \>Toggle X Rotation</>
+            <br>
+            <input type="checkbox" id="yC" checked="true" onclick="yCheck()" \>Toggle Y Rotation</>
+            <br>
+            <input type="checkbox" id="zC" onclick="zCheck()" \>Toggle Z Rotation</>
+        </div>
+    </div>
+
+    <div id="canvas"></div>
+
+    
+</html>
+</DOCTYPE!>
